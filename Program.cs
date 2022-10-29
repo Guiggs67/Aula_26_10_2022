@@ -4,43 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aula_26_10_2022
+namespace Exercício_51
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int cont =1, idade;
+            string[] nomes = new string[5];
+            double[] salarios = new double[5];
 
-            //contar de 1 a 10
-
-            do
+            for (int p = 0; p < nomes.Length; p++)
             {
-                Console.WriteLine($"Número {cont}");
-                cont++;
-            } while (cont <= 10);
+                Console.WriteLine($"Digite nome({p+1}):");
+                nomes[p] = Console.ReadLine();
+            }
 
-            //fazendo a validação de uma idade que tem 
-            // que ser maior ou igual a 0
-            do
+            for(int p2=0; p2< salarios.Length; p2++ )
             {
-                Console.WriteLine("Digite uma idade:");
-                idade = Convert.ToInt32(Console.ReadLine());
-            } while (idade < 0);
-
-            //idade = -1 //forçar a entrada
-            
-                Console.WriteLine("Digite a idade:");
-                idade = Convert.ToInt32(Console.ReadLine());
-                while(idade<0)
-                {
-                    Console.WriteLine("Digite a idade");
-                    idade = Convert.ToInt32(Console.ReadLine());
-                }
-            
-
-            Console.ReadKey();
+                Console.WriteLine($"Digite salário({p2 + 1}):");
+                nomes[p2] = Console.ReadLine();
+            }
         }
-
     }
 }
