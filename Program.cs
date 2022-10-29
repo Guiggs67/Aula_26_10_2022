@@ -4,26 +4,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercício_51
+namespace Aula_28_10_2022
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string[] nomes = new string[5];
-            double[] salarios = new double[5];
+            //crie um vetor de 5 strings
+            String[] nomes = new string[5];
+            //crie um vettor de 3 inetiros
+            //int[] numeros = new int[3];
+            //crie um vetor de 2 doubles (salário) e já coloca o valor
+            //double[] salarios = { 1500.99, 3400.00 };
 
-            for (int p = 0; p < nomes.Length; p++)
+            //para atribuir um dado fixo
+            //nomes[0] = "João";
+
+            //para atribur um dado do usuario
+            //numeros[2] = Convert.ToInt32(Console.ReadLine());
+
+            //int pos = 2;
+            //nomes[pos] = Console.ReadLine();
+
+            //entrada de dados automatico
+            for(int p=0; p<nomes.Length; p++)
             {
-                Console.WriteLine($"Digite nome({p+1}):");
+                Console.WriteLine($"Digite o Nome[{p + 1}]");
                 nomes[p] = Console.ReadLine();
             }
+            //não funciona para exibir os dados dos nomes
+            //Console.WriteLine(nomes);
+            //Console.WriteLine(nomes[]);
 
-            for(int p2=0; p2< salarios.Length; p2++ )
+            //para exibir todos os nomes
+            for(int p=0; p<nomes.Length; p++)
             {
-                Console.WriteLine($"Digite salário({p2 + 1}):");
-                nomes[p2] = Console.ReadLine();
+                Console.WriteLine($"Nomes[{p + 1}]:{nomes[p]}");
             }
+
+
+            //Outra forma
+            //foreach(String p in nomes)
+            //{
+            //    Console.WriteLine($"Nomes: {p}");
+            //}
+
+            Console.ReadKey();
         }
+
+
     }
 }
